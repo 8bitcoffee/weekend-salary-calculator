@@ -7,6 +7,25 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <header>
+        <h1 id="page-title">Salary Calculator</h1>
+    </header>
+    <main>
+        <form id="add-employee" onSubmit="addEmployee(event)">
+            <h3 id="add-employee-title">Add Employee</h3>
+            <input id="first-name" type="text" placeholder="First Name" class="add-employee-input" />
+            <input id="last-name" type="text" placeholder="Last Name" class="add-employee-input" />
+            <input id="id-number" type="text" placeholder="ID Number" class="add-employee-input" />
+            <input id="employee-title" type="text" placeholder="Job Title" class="add-employee-input" />
+            <input id="annual-salary" type="text" placeholder="Annual Salary" class="add-employee-input" />
+            <br></br>
+            <button id="submit-form">Submit</button>
+        </form>
+        <table id="employee-table">
+            <tr>
+                
+            </tr>
+        </table>
+    </main>
 </body>
 </html>
