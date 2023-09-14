@@ -1,6 +1,9 @@
 console.log("JS sourced"); // Testing 1,2,3
 
 const tableBody = document.querySelector("#table-body");
+const monthlyTotal = document.querySelector("#monthly-total");
+
+let monthlyWages = Math.round(65000/12);
 
 function addEmployee(event){
 
@@ -22,13 +25,19 @@ function addEmployee(event){
             <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
         </tr>
     `;
+
     return updateTotal(annualSalary);
 }
 
 function removeEmployee(event){
-
+    event.target.parentElement.parentElement.remove();
+    return updateTotal(0 - Number(event.target.parentElement.parentElement.children[4].innerHTML));
 }
 
 function updateTotal(annualSalary){
+    monthlyWages += Math.round(annualSalary / 12);
+    monthlyTotal.innerHTML = `
+        Total monthly wages: $${monthlyWages}
+    `;
 
 }
