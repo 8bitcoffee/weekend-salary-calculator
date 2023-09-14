@@ -19,7 +19,8 @@ th, td {
 
 thead {
     background-color: rgb(98, 98, 98);
-    color: white
+    color: white;
+    font-size: 110%;
 }
 
 tr:nth-child(even){
@@ -28,4 +29,8 @@ tr:nth-child(even){
 
 .btn-cell {
     text-align: center;
+}
+
+.placeholder {
+    visibility: hidden;
 }
