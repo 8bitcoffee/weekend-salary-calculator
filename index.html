@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Salary Calulator - Weekend Code Challenge</title>
+    <title>Salary Calculator - Weekend Code Challenge</title>
     <script src="salaryCalculator.js" defer></script>
     <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
@@ -30,6 +30,7 @@
                     <th>ID Number</th>
                     <th>Job Title</th>
                     <th>Annual Salary</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -40,9 +41,40 @@
                     <td>ID Number</td>
                     <td>Job Title</td>
                     <td>Annual Salary</td>
+                    <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
                 </tr>
-            </tbody>    
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>ID Number</td>
+                    <td>Job Title</td>
+                    <td>Annual Salary</td>
+                    <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>ID Number</td>
+                    <td>Job Title</td>
+                    <td>Annual Salary</td>
+                    <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>ID Number</td>
+                    <td>Job Title</td>
+                    <td>Annual Salary</td>
+                    <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
+                </tr>
+            </tbody>
+            <tfoot id="table-footer" colspan="5">
+                <tr>
+                    <td id="table-footer-row" colspan="5"></td>
+                </tr>
+            </tfoot>    
         </table>
+        <h2 id="total-monthly">Total monthly: $00,000</h2>
     </main>
 </body>
 </html>
