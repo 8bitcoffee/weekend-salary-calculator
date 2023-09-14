@@ -25,15 +25,7 @@ function addEmployee(event){
 
     let tempstr = '';
 
-    for (let i in annualSalary){
-        for (let x in [...Array(10).keys()]){
-            if (annualSalary[i] == x){
-                tempstr += annualSalary[i];
-            }
-        }
-    }
-    annualSalary = tempstr;
-    annualSalary = Number(annualSalary);
+    annualSalary = stripFormat(annualSalary);
 
     tableBody.innerHTML += `
         <tr>
@@ -58,18 +50,14 @@ function addEmployee(event){
 function removeEmployee(event){
     event.target.parentElement.parentElement.remove();
     let annualSalary = event.target.parentElement.parentElement.children[4].innerHTML;
-    console.log(annualSalary);
-    annualSalary = annualSalary.replace('$','');
-    annualSalary = annualSalary.replace(',','');
-    annualSalary = Number(annualSalary);
-    console.log(annualSalary);
+    annualSalary = stripFormat(annualSalary);
     return updateTotal(0 - annualSalary);
 }
 
 function updateTotal(annualSalary){
     monthlyWages += Math.round(annualSalary / 12);
     monthlyTotal.innerHTML = `
-        Total monthly wages: $${formatCash(String(monthlyWages))}
+        Total monthly wages: $${formatCash(monthlyWages)}
     `;
 
 }
@@ -78,4 +66,18 @@ function formatCash(salary){
     salary = Number(salary);
     let formattedSalary = salary.toLocaleString('en-US');
     return String(formattedSalary);
+}
+
+function stripFormat(fancyNumberString){
+    let tempstr = '';
+
+    for (let i in fancyNumberString){
+        for (let x in [...Array(10).keys()]){
+            if (fancyNumberString[i] == x){
+                tempstr += fancyNumberString[i];
+            }
+        }
+    }
+
+    return Number(tempstr);
 }
