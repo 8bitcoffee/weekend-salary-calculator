@@ -1,3 +1,14 @@
 body {
     background-color: whitesmoke;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000;
+}
+
+th, td {
+    border: 2px solid #000000;
+    padding: 3px;
+}
