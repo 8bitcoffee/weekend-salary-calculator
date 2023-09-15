@@ -1,5 +1,4 @@
 body {
-    background-color: whitesmoke;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -46,6 +45,7 @@ tr:nth-child(even){
 #page-title {
     text-align: center;
     text-decoration: underline;
+    font-size: 32pt;
 }
 
 .add-employee-input {
@@ -61,11 +61,11 @@ tr:nth-child(even){
     justify-content:space-around;
     margin-right: 10px;
     margin-left: 10px;
-
 }
 
 main {
     padding-top: 100px;
+    background-color: transparent;
 }
 
 #submit-form {
@@ -76,4 +76,18 @@ main {
     font-size: 16pt;
     font-weight:200;
     border-radius: 12px;
+}
+
+.grad {
+    height: 1200px;
+    background-image: linear-gradient(to bottom, lightblue, white);
+}
+
+#table-body {
+    background-color: white;
+}
+
+#table-footer {
+    background-color: transparent;
+    border: 5px solid black;
 }

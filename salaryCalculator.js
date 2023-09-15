@@ -1,10 +1,17 @@
 console.log("JS sourced"); // Testing 1,2,3
 
-const tableBody = document.querySelector("#table-body");
-const monthlyTotal = document.querySelector("#monthly-total");
+const tableBody = document.querySelector("#table-body"); // Where the employees are loaded
+const monthlyTotal = document.querySelector("#monthly-total"); // The spot where the monthly total wages is changed
 
-let monthlyWages = Math.round(65000/12);
+let monthlyWages = Math.round(65000/12); // Set with example value. Always kept as number
 
+/**
+ * Takes the user inputs and enters them into the table. Calculates the current total monthly
+ *      wages given the annual wages of entered employees.
+ * @param {Object} event // event from onSubmit click of form
+ * @returns sends to updateTotal(annualSalary) where annualSalary is a the type - number of the employee
+ *              annual salary stripped of all symbols.
+ */
 function addEmployee(event){
 
     event.preventDefault();

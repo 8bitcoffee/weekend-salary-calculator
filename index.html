@@ -6,11 +6,11 @@
     <script src="salaryCalculator.js" defer></script>
     <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="grad">
     <header>
         <h1 id="page-title">Salary Calculator</h1>
     </header>
-    
+
     <main>
         <h3 id="add-employee-title">Add Employee</h3>
         <form id="add-employee" onSubmit="addEmployee(event)">
@@ -30,11 +30,12 @@
                     <th>ID Number</th>
                     <th>Job Title</th>
                     <th>Annual Salary</th>
+
                     <th><p class = "placeholder">Placeholder</p></th>
                 </tr>
             </thead>
             <tbody id="table-body">
-                <!-- Employees are added here -->
+                <!-- Example employee -->
                 <tr>
                     <td>Dwight</td>
                     <td>Schrute</td>
@@ -43,6 +44,7 @@
                     <td>$65,000</td>
                     <td class="btn-cell"><button onClick="removeEmployee(event)" class="remove-btn">Remove</button></td>
                 </tr>
+                <!-- Employees are added here -->
             </tbody>
             <tfoot id="table-footer" colspan="5">
                 <tr>
@@ -50,6 +52,7 @@
                 </tr>
             </tfoot>    
         </table>
+        <!-- h2 number will update as employees are added and removed -->
         <h2 id="monthly-total">Total monthly wages: $5,417</h2>
     </main>
 </body>
