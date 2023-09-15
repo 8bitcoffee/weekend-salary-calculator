@@ -5,13 +5,14 @@
     <title>Salary Calculator - Weekend Code Challenge</title>
     <script src="salaryCalculator.js" defer></script>
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image" href="https://github.com/8bitcoffee.png?size=25" />
 </head>
 <body class="grad">
     <header>
         <h1 id="page-title">Salary Calculator</h1>
     </header>
-
     <main>
+        <hr></hr>
         <h3 id="add-employee-title">Add Employee</h3>
         <form id="add-employee" onSubmit="addEmployee(event)">
             <input id="first-name" type="text" placeholder="First Name" class="add-employee-input" />
@@ -23,6 +24,7 @@
         </form>
         <br></br>
         <table id="employee-table">
+            <hr></hr>
             <thead id="table-header">
                 <tr>
                     <th>First Name</th>
@@ -55,5 +57,11 @@
         <!-- h2 number will update as employees are added and removed -->
         <h2 id="monthly-total">Total monthly wages: $5,417</h2>
     </main>
+    <footer>
+        <div id="sig-div">
+            <img id="logo" src="https://github.com/8bitcoffee.png?size=50" alt="8bit logo" onclick= "window.open(href = 'https:github.com/8bitcoffee')"></img>
+            <h6 id="signature-name" onclick= "window.open(href = 'https:github.com/8bitcoffee')">8bitcoffee</h6>
+        </div>
+    </footer>
 </body>
 </html>
